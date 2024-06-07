@@ -112,7 +112,7 @@ const [posicoes, ocorrencias] = encontrarPosicaoEContarOcorrencias(palavraUsuari
 // Exibindo o resultado
 if (ocorrencias > 0) {
     console.log(`A palavra '${palavraUsuario}' aparece ${ocorrencias} vez(es) na lista.`);
-    console.log(`Posição(s) na lista: ${posicoes.join(', ')}`);
+
 } else {
     console.log(`A palavra '${palavraUsuario}' não existe na lista.`);
 }
