@@ -49,17 +49,18 @@ class List<T>{
     }
 
     // Método para exibir o conteúdo da lista encadeada
-    print(): void {
+    print(){
         let current_node = this.start;
         process.stdout.write("[");
-        while (current_node !== null && current_node.value !== undefined) {
-            process.stdout.write(String(current_node.value) + ", ");
+        while(Object.keys(current_node).length != 0){ //Object is not empty
+            process.stdout.write(String(current_node.value)+ ", ");
             current_node = current_node.next;
         }
         process.stdout.write("]");
         process.stdout.write("\n")
     }
 }
+
 
 // Função para ler o conteúdo de um arquivo de texto e inseri-lo em um array, dividindo cada linha em palavras
 function lerArquivoEInserirEmLista<T>(nomeArquivo: string, lista: List<T>): void {
@@ -112,7 +113,8 @@ const [posicoes, ocorrencias] = encontrarPosicaoEContarOcorrencias(palavraUsuari
 // Exibindo o resultado
 if (ocorrencias > 0) {
     console.log(`A palavra '${palavraUsuario}' aparece ${ocorrencias} vez(es) na lista.`);
-
+    console.log(`A palavra '${palavraUsuario}' aparece na posição ${posicoes}.`);
+    
 } else {
     console.log(`A palavra '${palavraUsuario}' não existe na lista.`);
 }

@@ -1,4 +1,1 @@
-casa
-rua
-vista
-bola
+casa rua vista bola casa
